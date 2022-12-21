@@ -1,5 +1,4 @@
-require_relative 'Teacher.rb'
-include Teacher
+require_relative './person.rb'
 
 class Teacher < Person
   def initialize(name, age, parent_permission, specialization)
