@@ -6,6 +6,10 @@ class Person
     @parent_permission = parent_permission
     @id = Random.rand(1...100)
   end
+  
+  def correct_name
+    return @name
+  end
 
   private_class_method :is_of_age
     if (@age >= 18)
