@@ -4,32 +4,9 @@ class Person
     self.age = age
     self.name = name
     @parent_permission = parent_permission
+    @id = Random.rand(1...100)
   end
 
-  def setId=(id)
-    :id = id
-  end
-
-  def getId
-    return :id
-  end
-
-  def setName=(name)
-    @name = name
-  end
-
-  def getName
-    return @name
-  end
-
-  def getAge=(age)
-    @age = age
-  end
-
-  def setAge
-    return @age
-  end
-  
   private_class_method :is_of_age
     if (@age >= 18)
       return true
