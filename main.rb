@@ -2,7 +2,7 @@ require_relative './app'
 
 def launch
   app = App.new
-  app.start_app
+  app.run
 end
 
 launch
