@@ -1,25 +1,33 @@
+require_relative './nameable'
+
 class Person
-  att_accessor :id, :name, :age
-  def initialize(name='Unknown', age, parent_permission=false)
+  def initialize(age, name = 'Unknown', parent_permission: true)
     self.age = age
     self.name = name
     @parent_permission = parent_permission
     @id = Random.rand(1...100)
   end
 
-  private_class_method :is_of_age
-    if (@age >= 18)
-      return true
-    else
-      return false
-    end
+  attr_accessor :name, :age
+  attr_reader :id
+
+  def correct_name
+    @name.to_s
   end
 
-  def can_use_services
-      if (@age >= 18 && @parent_permission == true)
-        return true
-      else
-        return false
-      end
+  private
+
+  def of_age?
+    true if @age >= 18
+
+    false
+  end
+
+  public
+
+  def can_use_services?
+    true if @age >= 18 || @parent_permission == true
+
+    false
   end
 end
