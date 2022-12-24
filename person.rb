@@ -6,6 +6,7 @@ class Person
     self.name = name
     @parent_permission = parent_permission
     @id = Random.rand(1...100)
+    @rentals = []
   end
 
   attr_accessor :name, :age
