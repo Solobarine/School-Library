@@ -1,6 +1,6 @@
-require_relative './base_decorator.rb'
+require_relative './base_decorator'
 
-class Capitalize_Decorator < Base_Decorator
+class CapitalizeDecorator < Base_Decorator
   def correct_name
     @nameable.correct_name.capitalize
   end

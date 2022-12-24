@@ -1,6 +1,6 @@
-require_relative './base_decorator.rb'
+require_relative './base_decorator'
 
-class Trimmer_Decorator < Base_Decorator
+class TrimmerDecorator < Base_Decorator
   def correct_name
     if @nameable.correct_name.length <= 10
       @nameable.to_s

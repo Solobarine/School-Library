@@ -1,7 +1,8 @@
-require_relative './nameable.rb'
+require_relative './nameable'
 
 class Person
-  att_accessor :id, :name, :age
+  attr_accessor :id, :name, :age
+
   def initialize(name='Unknown', age, parent_permission: true)
     self.age = age
     self.name = name
