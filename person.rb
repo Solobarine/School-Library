@@ -1,7 +1,7 @@
 require_relative './nameable'
 
 class Person
-  def initialize(age, name = 'Unknown', parent_permission: true)
+  def initialize(age, name = 'Unknown', parent_permission = true)
     self.age = age
     self.name = name
     @parent_permission = parent_permission
