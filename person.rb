@@ -7,12 +7,12 @@ class Person
     @parent_permission = parent_permission
     @id = Random.rand(1...100)
   end
- 
+
   attr_accessor :name, :age
   attr_reader :id
 
   def correct_name
-    @name
+    @name.to_s
   end
 
   private
@@ -29,9 +29,5 @@ class Person
     true if @age >= 18 || @parent_permission == true
 
     false
-  end
-
-  def correct_name
-    @name.to_s
   end
 end
