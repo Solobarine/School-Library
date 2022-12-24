@@ -2,7 +2,7 @@ require_relative './nameable.rb'
 
 class Person
   att_accessor :id, :name, :age
-  def initialize(name='Unknown', age, parent_permission=false)
+  def initialize(name='Unknown', age, parent_permission: true)
     self.age = age
     self.name = name
     @parent_permission = parent_permission
@@ -12,8 +12,9 @@ class Person
   def correct_name
     return @name
   end
-
-  private_class_method :is_of_age
+  
+  private
+   def is_of_age
     if (@age >= 18)
       return true
     else
