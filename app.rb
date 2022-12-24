@@ -27,17 +27,14 @@ class App
     puts 'Press 7 to List Rentals of a Person'
     puts 'Press 0 to Exit'
   end
-
   def exit_app
     print 'Thank you for using the App. Give a like on Github.'
     exit
   end
-
   def start_app
     puts 'Hello User. Welcome to the school Library.'
     puts 'What would you like to do today?'
-
-    userChoices = {
+    user_Choices = {
       0 => :exit_app,
       1 => :list_books,
       2 => :list_people,
@@ -50,9 +47,9 @@ class App
   
     loop do
       user_interface
-      userChoice = gets.chomp.to_i
+      user_Choice = gets.chomp.to_i
       # Select the method to run
-      option = userChoices[userChoice]
+      option = user_Choices[user_Choice]
       if option == :exit_app
         print 'Thank you for using the App. Give a like on Github.'
         break
@@ -107,7 +104,6 @@ class App
   def create_book
     puts 'Create a book'
     puts '---------------'
-    puts '---------------'
     puts 'Enter Book Title: ...'
     title = gets.chomp.to_s
     puts 'Enter Book Author:...'
@@ -133,7 +129,6 @@ class App
 
   def create_student
     puts 'Welcome to the Create Students section'
-    puts '....'
     puts '....'
     puts 'Enter Student Age: ....'
     age = gets.chomp.to_i
@@ -191,5 +186,4 @@ class App
     puts "Thank you #{@people[person]} for renting a book"
     @rentals.push(rental)
   end
-
 end

@@ -1,4 +1,4 @@
-require './App'
+require './app'
 
 def launch
   app = App.new()
