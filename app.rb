@@ -128,13 +128,6 @@ class App
     @people.each do |person|
       next unless person.id == id
 
-  def list_rentals_for_person_id
-    print 'ID of person: '
-    id = gets.chomp.to_i
-    puts 'Rentals:'
-    @people.each do |person|
-      next unless person.id == id
-
       person.rentals.each do |rental|
         puts "Date: #{rental.date}, Book: #{rental.book.title} by #{rental.book.author}"
       end
