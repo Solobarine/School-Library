@@ -1,4 +1,5 @@
 require_relative './nameable'
+require_relative './rental'
 
 class Person
   def initialize(age, name = 'Unknown', parent_permission: true)
@@ -30,5 +31,9 @@ class Person
     true if @age >= 18 || @parent_permission == true
 
     false
+  end
+  
+  def add_rental(book, date)
+    Rental.new(date, book, self)
   end
 end
